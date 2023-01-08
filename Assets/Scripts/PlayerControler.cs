@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     public float speed = 5.0f;
-    Rigidbody rgbody = null;
+    public float jumpforce = 10f;
+    Rigidbody rb = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        rgbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -21,5 +22,10 @@ public class PlayerControler : MonoBehaviour
   
         transform.Translate(-Vector3.forward * dx * this.speed * Time.deltaTime);
         transform.Translate(Vector3.right * dy * this.speed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
+            
+        }
     }
 }
