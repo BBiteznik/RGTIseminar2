@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 76ef0bb0b1ea1a949b16102ecdd85b93
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/SampleScene 1.unity
+    guid: 6b0aea30350a15e459f00074fd78ec51
+  - enabled: 0
+    path: Assets/Scenes/Nivoji.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
