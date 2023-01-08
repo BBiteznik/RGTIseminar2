@@ -937,6 +937,7 @@ GameObject:
   - component: {fileID: 1450807747}
   - component: {fileID: 1450807752}
   - component: {fileID: 1450807753}
+  - component: {fileID: 1450807754}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1070,6 +1071,20 @@ MonoBehaviour:
   sensitivity: {x: 2000, y: -2000}
   maxVericalAngleFromHorizon: 90
   inputLagPeriod: 0.005
+--- !u!114 &1450807754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450807745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5259c3b0dd2c9f84e9862f3e944534f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomba: {fileID: 8869669038624362432}
+  btn: {fileID: 0}
 --- !u!64 &1461918502
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10570,7 +10585,7 @@ GameObject:
   - component: {fileID: 4349925142837327132}
   - component: {fileID: 1160098878}
   m_Layer: 0
-  m_Name: Cube.071
+  m_Name: Bomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
