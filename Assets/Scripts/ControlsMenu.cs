@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ControlsMenu : MonoBehaviour
 {
-    public GameObject main = null;
 
-    public void BackMain() {
-        main.SetActive(true);
-        this.gameObject.SetActive(false);
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Press");
     }
 
 }

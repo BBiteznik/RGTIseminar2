@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject controls = null;
+    public GameObject navodila = null;
 
     public void PlayGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void DisplayControls() {
-        controls.SetActive(true);
+    public void DisplayNavodila() {
+        navodila.SetActive(true);
         this.gameObject.SetActive(false);
     }
 }
