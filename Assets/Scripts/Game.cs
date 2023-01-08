@@ -7,6 +7,8 @@ using TMPro;
 
 public class Game : MonoBehaviour
 {
+
+    public GameObject nal1 = null;
     public float tr = 5;
     public TextMeshProUGUI textdisp = null;
     // Start is called before the first frame update
@@ -24,7 +26,11 @@ public class Game : MonoBehaviour
 
         string text = "00" + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
         textdisp.text = text;
-        Debug.Log(text);
+        //Debug.Log(text);
+
+        if (nal1.GetComponent<FirstGame>().done) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
 
         if (tr <= 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

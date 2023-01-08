@@ -7,9 +7,10 @@ public class Interactions : MonoBehaviour
 {
 
     public GameObject bomba = null;
+    public GameObject bbgui = null;
     public Button btn = null;
     private float distance = 0;
-    private bool enb = false;
+    public bool enb = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,17 +24,17 @@ public class Interactions : MonoBehaviour
         distance = Vector3.Distance(bomba.transform.position, this.transform.position);
         if (distance <= 1.5f && !enb)
         {
-            Color col = btn.GetComponent<Image>().color;
-            col.a = 1;
-            btn.GetComponent<Image>().color = col;
             enb = true;
         }
         else if (distance > 1.5f && enb)
         {
-            Color col = btn.GetComponent<Image>().color;
-            col.a = 0.35f;
-            btn.GetComponent<Image>().color = col;
             enb = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            bbgui.SetActive(true);
         }
     }
 }
