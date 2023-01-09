@@ -8,6 +8,7 @@ public class ExitGui : MonoBehaviour
     public GameObject selgui = null;
     // Start is called before the first frame update
     public void BackButton() {
+        Cursor.lockState = CursorLockMode.Locked;
         selgui.SetActive(true);
         bbgui.SetActive(false);
         this.gameObject.SetActive(false);

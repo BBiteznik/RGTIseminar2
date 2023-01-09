@@ -31,7 +31,7 @@ public class Interactions : MonoBehaviour
             enb = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (enb && Input.GetKeyDown(KeyCode.F))
         {
             Cursor.lockState = CursorLockMode.None;
             bbgui.SetActive(true);

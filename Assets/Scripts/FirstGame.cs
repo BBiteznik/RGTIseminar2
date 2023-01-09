@@ -104,6 +104,7 @@ public class FirstGame : MonoBehaviour
     {
         done = check();
         if (done) {
+            Cursor.lockState = CursorLockMode.Locked;
             sel.SetActive(true);
             selectionbtn.gameObject.SetActive(false);
             bb.SetActive(false);

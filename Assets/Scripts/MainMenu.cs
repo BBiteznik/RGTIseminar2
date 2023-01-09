@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void DisplayNavodila() {
+        Debug.Log("haha0");
         navodila.SetActive(true);
         this.gameObject.SetActive(false);
     }

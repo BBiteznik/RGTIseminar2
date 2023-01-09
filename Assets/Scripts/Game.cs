@@ -8,7 +8,9 @@ using TMPro;
 public class Game : MonoBehaviour
 {
 
+    public GameObject nal3 = null;
     public GameObject nal1 = null;
+    public GameObject nal2 = null;
     public float tr = 5;
     public TextMeshProUGUI textdisp = null;
     // Start is called before the first frame update
@@ -28,7 +30,11 @@ public class Game : MonoBehaviour
         textdisp.text = text;
         //Debug.Log(text);
 
-        if (nal1.GetComponent<FirstGame>().done) {
+        bool d1 = nal1.GetComponent<FirstGame>().done;
+        bool d3 = nal3.GetComponent<ThirdGame>().done;
+        bool d2 = nal2.GetComponent<SecondGame>().done;
+
+        if (d1 && d2 && d3) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
