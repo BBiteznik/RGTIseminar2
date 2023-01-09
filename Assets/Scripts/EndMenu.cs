@@ -9,4 +9,8 @@ public class EndMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+    public void Start() {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }

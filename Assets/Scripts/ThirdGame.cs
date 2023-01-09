@@ -6,12 +6,13 @@ using TMPro;
 
 
 
-
 public class ThirdGame : MonoBehaviour
 {
+    public TextMeshProUGUI num1 = null;
+    public TextMeshProUGUI num2 = null;
     public bool done = false;
     private bool correct = false;
-    private string answer = "4218";
+    private string answer = "";
     private string input = null;
     public GameObject bb = null;
     public GameObject sel = null;
@@ -32,8 +33,22 @@ public class ThirdGame : MonoBehaviour
         }
     }
 
-    void OnEnable() { 
-        
+    void OnEnable() {
+        int r1 = Random.Range(1, 10);
+        int r2 = Random.Range(1, 10);
+
+        num1.text = r1.ToString(); //h
+        num2.text = r2.ToString(); //r
+
+        float res = 1 / 3.0f * (r2 * r2 * r1) * Mathf.PI;
+
+        int r = (int)Mathf.Round(res);
+
+        answer = r.ToString();
+
+        Debug.Log(answer);
+
+
     }
 
     void Start()
