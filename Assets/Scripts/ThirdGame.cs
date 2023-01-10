@@ -17,6 +17,8 @@ public class ThirdGame : MonoBehaviour
     public GameObject bb = null;
     public GameObject sel = null;
     public Button selectionbtn = null;
+    public Camera cam = null;
+    public GameObject player = null;
     // Start is called before the first frame update
 
     public void updateInput(string s) {
@@ -62,6 +64,13 @@ public class ThirdGame : MonoBehaviour
         done = correct;
         if (done)
         {
+            player.transform.position = new Vector3(-1.92f, 1.25f, -0.22f);
+            player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            cam.transform.rotation = Quaternion.Euler(0, 90, 0);
+            player.GetComponent<Rigidbody>().useGravity = true;
+            cam.GetComponent<PogledMiska>().enabled = true;
+            player.GetComponent<PogledMiska>().enabled = true;
+            player.GetComponent<PlayerControler>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             sel.SetActive(true);
             selectionbtn.gameObject.SetActive(false);

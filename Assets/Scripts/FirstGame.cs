@@ -53,6 +53,8 @@ public class FirstGame : MonoBehaviour
     public GameObject bb = null;
     public GameObject sel = null;
     public bool[] given = null;
+    public Camera cam = null;
+    public GameObject player = null;
     Naloga1 n1 = null;
 
     public void ButtonSet(int odgovor) {
@@ -104,6 +106,13 @@ public class FirstGame : MonoBehaviour
     {
         done = check();
         if (done) {
+            player.transform.position = new Vector3(-1.92f, 1.25f, -0.22f);
+            player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            cam.transform.rotation = Quaternion.Euler(0, 90, 0);
+            player.GetComponent<Rigidbody>().useGravity = true;
+            cam.GetComponent<PogledMiska>().enabled = true;
+            player.GetComponent<PogledMiska>().enabled = true;
+            player.GetComponent<PlayerControler>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             sel.SetActive(true);
             selectionbtn.gameObject.SetActive(false);
